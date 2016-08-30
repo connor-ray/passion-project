@@ -14,7 +14,8 @@ gem 'rake'
 
 gem 'shotgun'
 
-gem 'rspotify'
+gem 'httparty'
+gem 'byebug'
 
 group :test do
   gem 'shoulda-matchers'

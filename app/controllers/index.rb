@@ -1,13 +1,10 @@
-require_relative 'api_test'
-
 get '/' do
-  erb :'index'
+  redirect :'/sessions'
 end
 
-
 post '/' do
-  @artist = SpotifyArtist.new(params[:artsit])
-  @artist.related_artists
-
+  artist = SpotifyArtist.new(params[:artist])
+  @ra_data = artist.related_artists
+  @artist = artist.artist_data[0]
   erb :'show_artists'
 end

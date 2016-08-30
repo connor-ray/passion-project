@@ -1,0 +1,14 @@
+<h1 class='find_artist'>Find related artists!</h1>
+
+<form action="/" method="post">
+  <input type="text" name="artist" placeholder="Artist">
+</form>
+
+<div class="ra-container">
+  <h2><%= @artist %></h2>
+  <ul>
+    <% @ra_data.each do |a| %>
+    <li><%= a["name"] %></li>
+    <% end %>
+  </ul>
+</div>

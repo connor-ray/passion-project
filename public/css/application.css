@@ -1,15 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
 body {
   background: #4F546E;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 form {
-  background: #D2D2D2;
-  max-width: 600px;
-  margin: 50px auto;
+  margin: 30px auto;
+  width: 35%;
   border-radius: 4px;
-  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  /*box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);*/
 }
+
+.sign_up {
+  font-size: 40px;
+  right: 3px;
+  padding-top: 40px;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  color: #1ab188;
+  font-weight: 400;
+  margin: 0 0 40px;
+}
+
+.title {
+  font-size: 50px;
+  right: 3px;
+  padding-top: 40px;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  margin: 0 0 40px;
+}
+
 
 input::-webkit-input-placeholder {
 color: #D2D2D2;
@@ -28,10 +56,11 @@ color: #D2D2D2;
 }
 
 .title_container {
-  padding-left: 100px;
-  padding-top: 100px;
+  padding-left: 260px;
+  padding-top: 30px;
   padding-bottom: 30px;
-  margin: auto;
+/*  padding-bottom: 30px;
+*/  margin: auto;
   width: 50%;
 }
 
@@ -40,7 +69,7 @@ color: #D2D2D2;
   display: inline;
   vertical-align: top;
   font-family: "Oswald";
-  font-size: 100px;
+  font-size: 80px;
   letter-spacing: .3em;
   position: relative;
   bottom: 0;
@@ -51,7 +80,7 @@ color: #D2D2D2;
   display: inline;
   vertical-align: top;
   font-family: "Oswald";
-  font-size: 100px;
+  font-size: 80px;
   letter-spacing: .3em;
   color: white;
   left: 12px;
@@ -66,7 +95,7 @@ color: #D2D2D2;
   display: inline;
   vertical-align: middle;
   font-family: "Oswald";
-  font-size: 100px;
+  font-size: 80px;
   letter-spacing: .3em;
   color: white;
   left: 12px;
@@ -77,10 +106,15 @@ color: #D2D2D2;
   margin: 80px auto;
 }
 
+input {
+  margin: auto;
+}
 
-.welcome {
-  right: 3px;
-  padding-top: 40px;
+
+.login_link {
+  font-size: 20px;
+  left: 3px;
+  padding-top: 5px;
   position: relative;
   bottom: 0;
   text-align: center;
@@ -89,8 +123,24 @@ color: #D2D2D2;
   margin: 0 0 40px;
 }
 
-input {
-  margin: auto;
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #1ab188;
+}
+
+a:active {
+    text-decoration: none;
+    color: white;
 }
 
 input, textarea {
@@ -102,7 +152,7 @@ input, textarea {
   background: white;
   background-image: none;
   border: 2px solid white;
-  color: #ffffff;
+  color: black;
   border-radius: 0.1;
   -webkit-transition: border-color .25s ease, box-shadow .25s ease;
   transition: border-color .25s ease, box-shadow .25s ease;
@@ -116,6 +166,7 @@ textarea {
   border: 4px solid #a0b3b0;
   resize: vertical;
 }
+
 
 .field-wrap {
   left: 24%;
