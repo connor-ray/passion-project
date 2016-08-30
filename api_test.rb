@@ -4,8 +4,7 @@ class SpotifyArtist
   include HTTParty
   base_uri 'https://api.spotify.com/v1'
 
-
-  attr_reader :artist_name, :popularity, :id, :genres
+  attr_reader :artist_name, :popularity, :id, :genres, :ra_json
 
   def initialize(artist)
     @artist_search = artist
@@ -41,25 +40,49 @@ class SpotifyArtist
     @artist_data << object_hash["genres"]
   end
 
-  def parse_related_artists
-
+  def parse_related_artists(array)
+    array.map! do |artist|
+      artist.select { |key, value| ["name", "popularity", "id", "genres"].include?(key) }
+    end
   end
 
   def related_artists
     self.search
     self.parse_data
     id = @artist_data[2]
-    id
-    @ra_json = self.class.get("/artists/#{id}/related-artists", header: {"Accept" => "application/json"})
+    json = self.class.get("/artists/#{id}/related-artists", header: {"Accept" => "application/json"})
+    @ra_json = json.first[1]
+    parse_related_artists(@ra_json)
+  end
+
+  def related_artfist
+
   end
 end
 
-search = "Rolling Stones"
 
-rolling = SpotifyArtist.new(search)
 
-a = rolling.related_artists
-p a.first
+loop do
+  puts "Please enter an artist:"
+  search = gets.chomp
+  if search == "stop"
+    break
+  end
+  artist = SpotifyArtist.new(search)
+  artist.related_artists
+  ra = artist.ra_json
+
+  ra.each do |artist|
+    artist.each do |key, value|
+      if key == "name"
+        puts value
+      end
+    end
+  end
+end
+
+
+
 # def parse_data(json_object)
 #   data = []
 #   object_hash = json_object.first[1]['items'][0]
