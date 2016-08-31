@@ -6,12 +6,44 @@ ul {
 
 
 .ra-container {
-  margin: 0 auto;
+  width: 60%;
+  margin: 10px auto;
   position: relative;
+  text-align:center;
+  border: solid white 1px;
+}
+
+.second_search {
+  width: 25%;
+  margin-right: 705px;
+  padding: 20px;
+}
+
+.head_artist {
+  font-size: 40px;
+  color: white;
+  padding : 15px;
+}
+
+.artist_continer {
+  display: inline-block;
+}
+
+.column_1 {
+  display: inline-block;
+  left: 2%;
+  width: 48%;
+}
+
+.column_2 {
+  display: inline-block;
+  right: 2%;
+  width: 48%;
+  border-left: solid white 2px;
+}
+
+.ra_name {
   text-align: center;
-  width: 20%;
-  border: solid white;
-  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
 
 h2 {

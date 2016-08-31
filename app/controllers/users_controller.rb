@@ -1,7 +1,6 @@
 # USERS INDEX
 get '/users' do
-  @users = User.all
-  erb :'users/index'
+  redirect "/"
 end
 
 # USERS NEW
@@ -13,8 +12,7 @@ end
 # USERS CREATE
 post '/users' do
   user = params[:user]
-  if params[:password_confirmation] == user[:password_hash]
-
+  if params[:password_confirmation] == user[:password]
     @user = User.new(params[:user])
     if @user.save
       session[:id] = @user.id

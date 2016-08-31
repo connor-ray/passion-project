@@ -56,4 +56,5 @@ class SpotifyArtist
     @ra_json = json.first[1]
     parse_related_artists(@ra_json)
   end
+
 end

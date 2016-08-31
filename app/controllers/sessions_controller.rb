@@ -7,19 +7,13 @@ get '/sessions/new' do
 end
 
 post '/sessions' do
-  user = params[:user]
-  @user = User.find_by_email(user[:email])
-  if @user == nil
-    @user = User.new(params[:user])
+  @user = User.find_by_email(params[:email])
+  if @user && @user.password == params[:password]
     session[:id] = @user.id
-    erb 'index'
-  elsif @user && @user.password == params[:password]
-    session[:id] = @user.id
-    erb 'index'
-  else
-    # pls ppl yell at me about making a errros partial after......
-    @errors = ["Username && Password not found."]
     erb :'index'
+  else
+    @errors = ["Username && Password not found."]
+    redirect :'users/new'
   end
 end
 

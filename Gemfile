@@ -16,6 +16,7 @@ gem 'shotgun'
 
 gem 'httparty'
 gem 'byebug'
+gem 'json'
 
 group :test do
   gem 'shoulda-matchers'
