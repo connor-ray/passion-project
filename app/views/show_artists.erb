@@ -2,61 +2,111 @@
   <input type="text" name="name" autofocus="autofocus" placeholder="Artist">
 </form>
 
-<div class="ra-container">
-  <div class="artist_container">
-    <div class="head_artist"><%= @artist %></div>
-    <div class="column_1">
-      <div class="artist_1">
-        <form id="artist_search" class="art_btn" action="/" method="post">
-          <input class="artist_display" type="submit" name="name" value="<%= @ra_data[0]["name"] %>">
-        </form>
-      </div>
-      <div class="artist_2">
-        <form id="artist_search" class="art_btn" action="/" method="post">
-          <input class="artist_display" type="submit" name="name" value="<%= @ra_data[1]["name"] %>">
-        </form>
-      </div>
-      <div class="artist_3">
-        <form id="artist_search" class="art_btn" action="/" method="post">
-          <input class="artist_display" type="submit" name="name" value="<%= @ra_data[2]["name"] %>">
-        </form>
-      </div>
-      <div class="artist_4">
-        <form id="artist_search" class="art_btn" action="/" method="post">
-          <input class="artist_display" type="submit" name="name" value="<%= @ra_data[3]["name"] %>">
-        </form>
-      </div>
-      <div class="artist_5">
-        <form id="artist_search" class="art_btn" action="/" method="post">
-          <input class="artist_display" type="submit" name="name" value="<%= @ra_data[4]["name"] %>">
-        </form>
+<div class="flip-me" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+   <div class="flipper" class="active">
+    <div class="front">
+      <div id="list" class="ra-container">
+      <button id="flip-button">FLAKE</button>
+        <div class="head_artist"><%= @artist %></div>
+          <div class="artist_container">
+          <div class="column_1">
+            <div class="artist_1">
+              <form id="artist_search" class="art_btn" action="/artist" method="post">
+                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[0]["name"] %>">
+              </form>
+            </div>
+            <div class="artist_2">
+              <form id="artist_search" class="art_btn" action="/artist" method="post">
+                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[1]["name"] %>">
+              </form>
+            </div>
+            <div class="artist_3">
+              <form id="artist_search" class="art_btn" action="/artist" method="post">
+                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[2]["name"] %>">
+              </form>
+            </div>
+            <div class="artist_4">
+              <form id="artist_search" class="art_btn" action="/artist" method="post">
+                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[3]["name"] %>">
+              </form>
+            </div>
+          </div>
+          <div class="column_2">
+            <div class="artist_6">
+              <form id="artist_search" class="art_btn" action="/artist" method="post">
+                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[5]["name"] %>">
+              </form>
+            </div>
+            <div class="artist_7">
+              <form id="artist_search" class="art_btn" action="/artist" method="post">
+                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[6]["name"] %>">
+              </form>
+            </div>
+            <div class="artist_8">
+              <form id="artist_search" class="art_btn" action="/artist" method="post">
+                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[7]["name"] %>">
+              </form>
+            </div>
+            <div class="artist_9">
+              <form id="artist_search" class="art_btn" action="/artist" method="post">
+                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[8]["name"] %>">
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="column_2">
-      <div class="artist_6">
-        <form id="artist_search" class="art_btn" action="/" method="post">
-          <input class="artist_display" type="submit" name="name" value="<%= @ra_data[5]["name"] %>">
-        </form>
+<img class="image" src="flake.png">
+    <div class="back">
+      <div class="ra-container">
+      <div class="test-div">
+        <p></p>
       </div>
-      <div class="artist_7">
-        <form id="artist_search" class="art_btn" action="/" method="post">
-          <input class="artist_display" type="submit" name="name" value="<%= @ra_data[6]["name"] %>">
-        </form>
-      </div>
-      <div class="artist_8">
-        <form id="artist_search" class="art_btn" action="/" method="post">
-          <input class="artist_display" type="submit" name="name" value="<%= @ra_data[7]["name"] %>">
-        </form>
-      </div>
-      <div class="artist_9">
-        <form id="artist_search" class="art_btn" action="/" method="post">
-          <input class="artist_display" type="submit" name="name" value="<%= @ra_data[8]["name"] %>">
-        </form>
-      </div>
-      <div class="artist_10">
-        <form id="artist_search" class="art_btn" action="/" method="post">
-          <input class="artist_display" type="submit" name="name" value="<%= @ra_data[9]["name"] %>">
-        </form>
+      <button id="flip-button">LIST</button>
+      <button id="save-button">SAVE</button>
+        <div class="head_artist"><%= @artist %></div>
+          <div class="b_artist_container">
+            <div class="artist_div" class="b_artist_1">
+              <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+                <input class="artist_display" type="submit" name="name" value="<%= @ra_data[0]["name"] %>">
+              </form>
+            </div>
+            <div class="artist_div" class="b_artist_2">
+              <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+                <input class="artist_display" type="submit" name="name" value="<%= @ra_data[1]["name"] %>">
+              </form>
+            </div>
+            <div class="artist_div" class="b_artist_3">
+              <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+                <input class="artist_display" type="submit" name="name" value="<%= @ra_data[2]["name"] %>">
+              </form>
+            </div>
+            <div class="artist_div" class="b_artist_4">
+              <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+                <input class="artist_display" type="submit" name="name" value="<%= @ra_data[3]["name"] %>">
+              </form>
+            </div>
+            <div class="artist_div" class="b_artist_6">
+              <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+                <input class="artist_display" type="submit" name="name" value="<%= @ra_data[5]["name"] %>">
+              </form>
+            </div>
+            <div class="artist_div" class="b_artist_7">
+              <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+                <input class="artist_display" type="submit" name="name" value="<%= @ra_data[6]["name"] %>">
+              </form>
+            </div>
+            <div class="artist_div" class="b_artist_8">
+              <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+                <input class="artist_display" type="submit" name="name" value="<%= @ra_data[7]["name"] %>">
+              </form>
+            </div>
+            <div class="artist_div" class="b_artist_9">
+              <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+                <input class="artist_display" type="submit" name="name" value="<%= @ra_data[8]["name"] %>">
+              </form>
+            </div>
+        </div>
       </div>
     </div>
   </div>

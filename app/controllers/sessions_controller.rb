@@ -10,7 +10,7 @@ post '/sessions' do
   @user = User.find_by_email(params[:email])
   if @user && @user.password == params[:password]
     session[:id] = @user.id
-    erb :'index'
+    erb :'artist'
   else
     @errors = ["Username && Password not found."]
     redirect :'users/new'

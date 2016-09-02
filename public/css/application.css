@@ -8,12 +8,13 @@ body {
 }
 
 form {
-  margin: 30px auto;
+  margin: 25px auto;
   width: 35%;
 }
 
 .login_form {
-background: #E0E6DB;
+margin-top: 140px;
+background: #1ab188;
 box-shadow: 4px 5px 13px -1px rgba(0,0,0,0.56);
 border-radius: 2%, 2%;
 }
@@ -23,7 +24,7 @@ border-radius: 2%, 2%;
 }
 
 .header_bar {
-  background: white
+  background: white;
 }
 
 .log_out_button {
@@ -43,7 +44,7 @@ border-radius: 2%, 2%;
   background: #4F546E;
 }
 
-.artist_display {
+.artist_display_normal {
   color: white;
   background: #4F546E;
   width: 80%;
@@ -51,7 +52,7 @@ border-radius: 2%, 2%;
   transition: .3s;
 }
 
-.artist_display:hover {
+.artist_display_normal:hover {
   color: #4F546E;
   background: white;
   width: 85%;
@@ -70,7 +71,7 @@ border-radius: 2%, 2%;
   position: relative;
   bottom: 0;
   text-align: center;
-  color: #1ab188;
+  color: white;
   font-weight: 400;
   margin: 0 0 40px;
 }
@@ -234,22 +235,24 @@ textarea {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
-  background: #1ab188;
-  color: #ffffff;
+  background: white;
+  color: #1ab188;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-appearance: none;
 }
 .button:hover, .button:focus {
-  background: #179b77;
+  background: #0E624C;
+  color: white;
 }
 
 .button-block {
   display: block;
+  color: #1ab188;
   width: 100%;
 }
 /*
-TO-DO: MOVE TO INDEPENDENT FILE*/
+TO-DO: MOVE TO INDEPENDENT FILE
 
 .node {
   cursor: pointer;
@@ -270,3 +273,4 @@ TO-DO: MOVE TO INDEPENDENT FILE*/
   stroke: #ccc;
   stroke-width: 1.5px;
 }
+*/
