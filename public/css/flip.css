@@ -3,12 +3,13 @@
   perspective: 1000px;
 }
   /* flip the pane when hovered */
-  .flip-me .flipper {
+  .flip-container .flipper {
+    background: yellow;
     transform: rotateY(180deg);
   }
 
 .flip-container, .front, .back {
-  width: 1950px;
+  width: 1800px;
   height: 300px;
 }
 

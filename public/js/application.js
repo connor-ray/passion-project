@@ -1,23 +1,43 @@
 $(document).ready(function () {
-  // $("form").submit(function(event) {
-  //   event.preventDefault();
-  //   var input = $(this).serialize();
 
-  //   $("#die-container").removeClass("hidden");
+  // ajax related artist call///////
+  $(".front").on("submit", ".artist_search", function(event) {
+    event.preventDefault();
+    var stuff = $(event).serialize();
+    var name = this.name.value;
 
-  //   $.ajax({
-  //     method: 'post',
-  //     url: '/rolls',
-  //     data: input
-  //   })
-  //   .done(function(response){
-  //     $('.roll').html(response)
-  //   })
-  // });
+    $.ajax({
+      method: 'post',
+      url: '/artist_circle',
+      data: {name: name}
+    })
+    .done(function(response){
+      $("#ra_placement_circle").replaceWith(response);
+    })
+  });
 
-  // $(".artist_div").mouseenter(function() {
-  //   $(".test-div").addClass("show-div");
-  // })
+  $(".back").on("submit", ".artist_search", function(event) {
+    event.preventDefault();
+    var stuff = $(event).serialize();
+    var name = this.name.value;
+
+    $.ajax({
+      method: 'post',
+      url: '/artist',
+      data: {name: name}
+    })
+    .done(function(response){
+      $("#ra_placement").replaceWith(response);
+    })
+  });
+
+
+  // ajax related artist call///////
+
+// hover for snowflake///////
+  $(".artist_div").mouseenter(function() {
+    $(".test-div").addClass("show-div");
+  })
 
   $(".artist_display").mouseenter(function() {
     $(".test-div").addClass("show-div");
@@ -30,13 +50,21 @@ $(document).ready(function () {
     $(".test-div p").replaceWith("<p></p>");
   });
 
-  $("#flip-button").click(function() {
-    $("#flip-button").toggleClass("flip-me");
+  $(".artist_display").click(function() {
+    $(".test-div").removeClass("show-div");
+    $(".test-div p").replaceWith("<p></p>");
+  });
+
+  $(".artist_div").mouseout(function() {
+    $(".test-div").removeClass("show-div");
+  });
+  // hover for snowflake///////
+
+  $(".flip-button").on("click", function() {
+    console.log("hellooo")
+    $("#flipper_box").toggleClass("flip-container");
   });
 
 
-  // $(".artist_div").mouseout(function() {
-  //   $(".test-div").removeClass("show-div");
-  // });
 
 });

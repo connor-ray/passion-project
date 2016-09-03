@@ -1,0 +1,23 @@
+.title_container {
+  padding-left: 260px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: auto;
+  margin-right: 320px;
+  width: 50%;
+}
+
+.header_bar {
+  display: flex;
+  background: white;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.log_out_button {
+  margin-left: 10px;
+  margin-top: 10px;
+  float: left;
+  width: 100px;
+}

@@ -2,68 +2,82 @@
   <input type="text" name="name" autofocus="autofocus" placeholder="Artist">
 </form>
 
-<div class="flip-me" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+<!-- <div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div> -->
+
+
+<div id="flipper_box" ontouchstart="this.classList.toggle('hover');">
    <div class="flipper" class="active">
-    <div class="front">
+    <div class="back">
       <div id="list" class="ra-container">
-      <button id="flip-button">FLAKE</button>
-        <div class="head_artist"><%= @artist %></div>
+        <button class="flip-button">FLAKE</button>
+        <div id="ra_placement">
+         <div class="head_artist"><%= @artist %></div>
           <div class="artist_container">
           <div class="column_1">
-            <div class="artist_1">
-              <form id="artist_search" class="art_btn" action="/artist" method="post">
+            <div class="artist">
+              <form class="artist_search" class="art_btn" action="/artist" method="post">
                 <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[0]["name"] %>">
               </form>
             </div>
-            <div class="artist_2">
-              <form id="artist_search" class="art_btn" action="/artist" method="post">
+            <div class="artist">
+              <form class="artist_search" class="art_btn" action="/artist" method="post">
                 <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[1]["name"] %>">
               </form>
             </div>
-            <div class="artist_3">
-              <form id="artist_search" class="art_btn" action="/artist" method="post">
+            <div class="artist">
+              <form class="artist_search" class="art_btn" action="/artist" method="post">
                 <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[2]["name"] %>">
               </form>
             </div>
-            <div class="artist_4">
-              <form id="artist_search" class="art_btn" action="/artist" method="post">
+            <div class="artist">
+              <form class="artist_search" class="art_btn" action="/artist" method="post">
                 <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[3]["name"] %>">
               </form>
             </div>
           </div>
           <div class="column_2">
             <div class="artist_6">
-              <form id="artist_search" class="art_btn" action="/artist" method="post">
-                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[5]["name"] %>">
+              <form class="artist_search" class="art_btn" action="/artist" method="post">
+                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[4]["name"] %>">
               </form>
             </div>
             <div class="artist_7">
-              <form id="artist_search" class="art_btn" action="/artist" method="post">
-                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[6]["name"] %>">
+              <form class="artist_search" class="art_btn" action="/artist" method="post">
+                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[5]["name"] %>">
               </form>
             </div>
             <div class="artist_8">
-              <form id="artist_search" class="art_btn" action="/artist" method="post">
-                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[7]["name"] %>">
+              <form class="artist_search" class="art_btn" action="/artist" method="post">
+                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[6]["name"] %>">
               </form>
             </div>
             <div class="artist_9">
-              <form id="artist_search" class="art_btn" action="/artist" method="post">
-                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[8]["name"] %>">
+              <form class="artist_search" class="art_btn" action="/artist" method="post">
+                <input class="artist_display_normal" type="submit" name="name" value="<%= @ra_data[7]["name"] %>">
               </form>
             </div>
           </div>
         </div>
+        </div>
       </div>
     </div>
-<img class="image" src="flake.png">
-    <div class="back">
+
+    <div class="front">
+    <img class="image" src="flake.png">
       <div class="ra-container">
       <div class="test-div">
         <p></p>
       </div>
-      <button id="flip-button">LIST</button>
+      <button class="flip-button">LIST</button>
       <button id="save-button">SAVE</button>
+      <div id="ra_placement_circle">
         <div class="head_artist"><%= @artist %></div>
           <div class="b_artist_container">
             <div class="artist_div" class="b_artist_1">
@@ -106,7 +120,9 @@
                 <input class="artist_display" type="submit" name="name" value="<%= @ra_data[8]["name"] %>">
               </form>
             </div>
+          </div>
         </div>
+        <div>
       </div>
     </div>
   </div>

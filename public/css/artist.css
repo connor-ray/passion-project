@@ -12,6 +12,8 @@ ul {
   text-align:center;
   border: solid white 1px;
   margin-bottom: 150px;
+  margin-top: 220px;
+  margin-left: 430px;
   text-align: center;
   padding-bottom: 40px;
 }
@@ -21,9 +23,18 @@ ul {
 }
 
 .second_search {
-  width: 25%;
-  margin-right: 705px;
-  padding: 20px;
+  width: 17%;
+  margin-left: 20px;
+  position: absolute;
+  top: 24%;
+}
+
+.dropdown {
+  width: 17%;
+  margin-right: 20px;
+  position: absolute;
+  right: 0;
+  top: 24%;
 }
 
 .head_artist {
@@ -32,7 +43,12 @@ ul {
   background: #4F546E;
 }
 
+.artist {
+  width: 100%;
+}
+
 .artist_continer {
+  width: 100%;
   display: inline-block;
 }
 
