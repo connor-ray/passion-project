@@ -15,7 +15,7 @@ post '/users' do
     @user = User.new(params[:user])
     if @user.save
       session[:id] = @user.id
-      erb :'index'
+      erb :'artist'
     else
       @errors = @user.errors.full_messages
       erb :'error'

@@ -9,6 +9,7 @@
   margin-bottom: 100px;
   margin-top: 70px;
 }
+
 .b_artist_container > * {
   display: block;
   position: absolute;
@@ -17,6 +18,10 @@
   margin: -3em;
   width: 6em;
   height: 6em;
+}
+
+.first_search {
+  width: 40%;
 }
 
 .b_artist_container > *:nth-of-type(1) {
@@ -159,5 +164,3 @@
   top: 250px;
   right: 410px;
 }
-
-

@@ -6,16 +6,13 @@ ul {
 
 
 .ra-container {
-  width: 60%;
+  width: 80%;
   margin: 10px auto;
-  position: relative;
-  text-align:center;
-  border: solid white 1px;
-  margin-bottom: 150px;
-  margin-top: 220px;
-  margin-left: 430px;
+  margin-top: 60px;
+  position: absolute;
   text-align: center;
-  padding-bottom: 40px;
+  border: solid white 1px;
+  text-align: center;
 }
 
 #list form {
@@ -26,14 +23,6 @@ ul {
   width: 17%;
   margin-left: 20px;
   position: absolute;
-  top: 24%;
-}
-
-.dropdown {
-  width: 17%;
-  margin-right: 20px;
-  position: absolute;
-  right: 0;
   top: 24%;
 }
 

@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 body {
-  background: #4F546E;
-  /*background-image: url("handsbackground-2.jpg");*/
+  /*background: #4F546E;*/
+  background-image: url("/gradient.png");
+  background-size: cover;
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.hide {
+  display: none;
 }
 
 form {
@@ -16,11 +22,29 @@ form {
   display: none;
 }
 
+input#submit {
+  background: none;
+  border: none;
+  padding: 0px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  float: left;
+  text-align: left;
+}
+
+input#submit:hover {
+  color: #0E624C;
+}
+
 .login_form {
-margin-top: 140px;
-background: #1ab188;
-box-shadow: 4px 5px 13px -1px rgba(0,0,0,0.56);
-border-radius: 2%, 2%;
+  margin-top: 140px;
+  width: 70%;
+  background: #1ab188;
+  box-shadow: 4px 5px 13px -1px rgba(0,0,0,0.56);
+  border-radius: 2%, 2%;
 }
 
 .search_artist {
@@ -28,29 +52,18 @@ border-radius: 2%, 2%;
 }
 
 .header_bar {
-  display: absolute;
   background: white;
   position: absolute;
+  height: 80px;
+  display: flex;
   width: 100%;
   top: 0;
+  z-index: 9998;
+  -webkit-box-shadow: -1px 2px 44px 0px rgba(59,57,59,1);
+  -moz-box-shadow: -1px 2px 44px 0px rgba(59,57,59,1);
+  box-shadow: -1px 2px 44px 0px rgba(59,57,59,1);
 }
 
-.log_out_button {
-  margin-left: 10px;
-  margin-top: 10px;
-  float: left;
-  width: 100px;
-}
-
-.lg_btn {
-  color: #4F546E;
-  background: white;
-}
-
-.lg_btn:hover {
-  color: white;
-  background: #4F546E;
-}
 
 .artist_display_normal {
   color: white;
@@ -113,55 +126,28 @@ input:-ms-input-placeholder {
 color: #D2D2D2;
 }
 
-.title_container {
-  padding-left: 260px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin: auto;
-  margin-right: 320px;
-  width: 50%;
+.login_title {
+  margin-top: 8px;
+  margin-bottom: 0;
 }
 
-.title_container p {
-  color: #1ab188;
-  display: inline;
-  vertical-align: top;
-  font-family: "Oswald";
-  font-size: 80px;
-  letter-spacing: .3em;
-  position: relative;
-  bottom: 0;
+.title_container {
+  margin: 0 auto;
+  position: absolute;
+  font-size: 18px;
+  width: 10%;
+  left: 20%;
+  right: 20%;
+  height: 100%;
+  display: flex;
   text-align: center;
 }
 
 .title_container h1 {
   display: inline;
-  vertical-align: top;
   font-family: "Oswald";
-  font-size: 80px;
   letter-spacing: .3em;
   color: #4F546E;
-  left: 2px;
-  position: relative;
-  bottom: 0;
-  margin: 0 0 40px;
-  text-align: center;
-  margin: 80px auto;
-}
-
-.title_container span {
-  display: inline;
-  vertical-align: middle;
-  font-family: "Oswald";
-  font-size: 80px;
-  letter-spacing: .3em;
-  color: #4F546E;
-  left: 12px;
-  position: relative;
-  bottom: 0;
-  margin: 0 0 40px;
-  text-align: center;
-  margin: 80px auto;
 }
 
 input {
