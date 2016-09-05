@@ -1,5 +1,5 @@
 .pannel_container {
-  width: 55%;
+  width: 46%;
   height: 500px;
   margin: auto;
   margin-top: 10%;
@@ -16,7 +16,7 @@
   margin-bottom: 40px;*/
   left: 0;
   border: black solid 1px;
-  width: 48%;
+  width: 400px;
   position: relative;
 }
 
@@ -29,18 +29,18 @@
   margin-bottom: 40px;*/
   float: right;
   border: black solid 1px;
-  width: 48%;
+  width: 400px;
   position: relative;
 }
 
 .inner_pop {
-  height: 30em;
+  height: 27em;
   border: solid black 1px;
   margin: 20px;
 }
 
 .inner_flake {
-  height: 30em;
+  height: 27em;
   border: solid black 1px;
   margin: 20px;
 }
