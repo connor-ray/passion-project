@@ -10,6 +10,10 @@ body {
   letter-spacing: 2px;
 }
 
+/*.content_container {
+  position: absolute;
+}*/
+
 .hide {
   opacity: 0;
   transition: .3s;
