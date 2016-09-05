@@ -4,43 +4,56 @@
   margin: auto;
   margin-top: 10%;
   position: relative;
-  background: grey;
+}
+
+.placement_div_r {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  float: right;
+  height: 100%;
+  width: 49%;
+}
+
+.placement_div_l {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  height: 100%;
+  float: left;
+  width: 49%;
 }
 
 .flakes_container {
-  background: blue;
+  margin-left: 10px;
   display: inline-block;
-/*  float: left;
-  margin-left: 170px;
-  margin-top: 30px;
-  margin-bottom: 40px;*/
-  left: 0;
-  border: black solid 1px;
+  float: right;
   width: 400px;
   position: relative;
+  border: solid white 2px;
 }
 
 .popular_container {
-  background: blue;
+  margin-right: 10px;
   display: inline-block;
-/*  float: right;
-  margin-right: 170px;
-  margin-top: 30px;
-  margin-bottom: 40px;*/
-  float: right;
-  border: black solid 1px;
+  float: left;
   width: 400px;
   position: relative;
+  border: solid white 2px;
 }
 
 .inner_pop {
   height: 27em;
-  border: solid black 1px;
   margin: 20px;
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+  text-align: center;
 }
 
 .inner_flake {
   height: 27em;
-  border: solid black 1px;
   margin: 20px;
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+  text-align: center;
 }
