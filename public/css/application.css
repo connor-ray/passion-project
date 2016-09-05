@@ -11,15 +11,12 @@ body {
 }
 
 .hide {
-  display: none;
+  opacity: 0;
+  transition: .3s;
 }
 
 form {
   margin: 25px auto;
-}
-
-.hide {
-  display: none;
 }
 
 input#submit {
@@ -48,12 +45,12 @@ input#submit:hover {
 }
 
 .search_artist {
-  padding-top: 250px;
+  padding-top: 50px;
 }
 
 .header_bar {
   background: white;
-  position: absolute;
+  position: fixed;
   height: 80px;
   display: flex;
   width: 100%;
@@ -136,7 +133,7 @@ color: #D2D2D2;
   position: absolute;
   font-size: 18px;
   width: 10%;
-  left: 20%;
+  left: 22%;
   right: 20%;
   height: 100%;
   display: flex;

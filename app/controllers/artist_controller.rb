@@ -1,3 +1,7 @@
+get '/artist' do
+  erb :'artist'
+end
+
 post '/artist' do
     artist = SpotifyArtist.new(params[:name])
     ra_data = artist.related_artists

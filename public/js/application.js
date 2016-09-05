@@ -72,6 +72,10 @@ $(document).ready(function () {
     console.log("fackk")
     $(".open_btn").removeClass("hide");
   });
+
+  $(".find_artist").click( function() {
+    $("#search_input").toggleClass("hide");
+  });
 });
 
 function openNav() {
