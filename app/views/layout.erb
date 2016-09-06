@@ -25,18 +25,21 @@
   <title></title>
 </head>
 <body>
-  <h1>Test</h1>
   <% if session[:id] %>
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">My Flakes</a>
+      <div id="flake_show">
+        <form id="my_flakes_button" class="log_out_button" action="/flakes" method="post">
+          <input id="submit" class="lg_btn" type="submit" value="MY FALKES">
+        </form>
+      </div>
+      <div class="flake_list">
+      </div>
       <div id="log_out_button">
         <form class="log_out_button" action="/sessions" method="post">
           <input type="hidden" name="_method" value="delete">
           <input id="submit" class="lg_btn" type="submit" value="LOG OUT">
         </form>
-      </div>
-      <div class="flake_list">
       </div>
   </div>
   <% end %>

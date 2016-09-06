@@ -12,7 +12,7 @@ post '/flakes' do
   if flake.save
     if request.xhr?
       content_type :html
-      erb :_flake, locals: {flakes: flakes}
+      erb :_flake, locals: {flakes: flakes}, layout: false
     end
   else
     redirect :'/'

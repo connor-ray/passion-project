@@ -93,6 +93,29 @@ $(document).ready(function () {
   });
   // hide/show search bar////////////
 
+  $("#flake_show").click("#my_flakes_button", function(event){
+    event.preventDefault();
+    if ($(".flake_list").hasClass("show")) {
+        $(".flake_list").removeClass("show");
+        var emptyDiv = $(".flake_list").empty()
+        setTimeout(function(){emptyDiv}, 5000);
+    }
+    else {
+      var request = $.ajax({
+        method: 'post',
+        url: '/flakes',
+        data: {name: name}
+      });
+
+      request.done(function(response){
+        $(".flake_list").empty().append(response);
+      });
+
+      $(".flake_list").addClass("show");
+    }
+  });
+
+
 
 });
 

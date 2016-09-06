@@ -25,6 +25,27 @@
     transition: 0.3s
 }
 
+.flake_list {
+  height: 0px;
+  transition: .5s;
+  width: 100%;
+}
+
+.show {
+  height: 83%;
+  transition: .5s;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.active {
+  color: blue;
+}
+
 input #submit {
     background: none;
     border: none;
