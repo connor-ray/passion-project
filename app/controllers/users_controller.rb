@@ -7,14 +7,8 @@ get '/users/new' do
   erb :'users/new'
 end
 
-get '/users/:id' do
-  @user = User.find(params[:id])
-  @flakes = @user.flakes
-  erb :'users/show'
-end
-
 post '/users' do
-  user = params[:user]
+  @user = params[:user]
   if params[:password_confirmation] == user[:password]
     @user = User.new(params[:user])
     if @user.save
@@ -28,4 +22,10 @@ post '/users' do
     @errors = ["Passwords do not match!"]
     erb :'index'
   end
+end
+
+get '/users/:id' do
+  @user = User.find(params[:id])
+  @flakes = @user.flakes
+  erb :'users/show'
 end

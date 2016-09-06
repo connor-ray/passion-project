@@ -3,51 +3,47 @@ $(document).ready(function () {
   // ajax related artist call///////
   $(".flipper").on("submit", ".artist_search", function(event) {
     event.preventDefault();
-    var stuff = $(event).serialize();
     var name = this.name.value;
 
-    $.ajax({
+    var request = $.ajax({
       method: 'post',
       url: '/artist_circle',
       data: {name: name}
-    })
-    .done(function(response){
-      $("#ra_placement_circle").replaceWith(response);
-    })
+    });
 
-    $.ajax({
+    request.done(function(response){
+      $("#ra_placement_circle").replaceWith(response);
+    });
+
+    var request2 = $.ajax({
       method: 'post',
       url: '/artist',
       data: {name: name}
-    })
-    .done(function(response){
+    });
+
+    request2.done(function(response){
       $("#ra_placement").replaceWith(response);
-    })
+    });
+
   });
-
-  $("")
-
-  // $(".back").on("submit", ".artist_search", function(event) {
-  //   event.preventDefault();
-  //   var stuff = $(event).serialize();
-  //   var name = this.name.value;
-
-  //   $.ajax({
-  //     method: 'post',
-  //     url: '/artist',
-  //     data: {name: name}
-  //   })
-  //   .done(function(response){
-  //     $("#ra_placement").replaceWith(response);
-  //   })
-  // });
   // ajax related artist call///////
 
-  $(".save_button").submit(function(event) {
+// Save button //////////////// *IN PROGRESS
+  $(".flipper").on("submit", ".save_button", function(event) {
     event.preventDefault();
+    name = this.name.value;
+    console.log(name);
+    // var request = $.ajax({
+    //   method: 'post',
+    //   url: '/flakes',
+    //   data: {name: name}
+    // });
+    request.done(function(response){
 
-    $
+    });
   });
+// Save button //////////////// *IN PROGRESS
+
 
 // hover for snowflake///////
   $(".artist_div").mouseenter(function() {
@@ -102,10 +98,10 @@ $(document).ready(function () {
 
 // Nav bar open/close ////////
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.right = "0";
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenav").style.right = "-250px";
 }
 // Nav bar open/close ////////

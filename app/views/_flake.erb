@@ -1,11 +1,11 @@
 <div class="flake_list">
   <ul>
-    <%= flakes.each do |flake| %>
-    <li>
-      <form  id="artist_search_a" action="/artist" method="post">
-        <input id="search_input" type="submit" name="name" value="<%= #{flake.name} %>">
-      </form>
-    </li>
-    <%= end %>
+    <% flakes.each do |flake| %>
+      <li>
+        <form class="artist_search" action="/artist" method="post">
+          <input class="nav_list" type="submit" name="name" value="<%= flake.artist %>">
+        </form>
+      </li>
+    <% end %>
   </ul>
 </div>

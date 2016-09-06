@@ -4,8 +4,10 @@ end
 
 post '/flakes' do
   id = session[:id]
-  flake = Flake.new(params[:name], id)
-  user = User.find_by(user_id: id)
+  artist = params[:name]
+  args = {artist: artist, user_id: id}
+  flake = Flake.new(args)
+  user = User.find_by(id: id)
   flakes = user.flakes
   if flake.save
     if request.xhr?
@@ -16,4 +18,3 @@ post '/flakes' do
     redirect :'/'
   end
 end
-
