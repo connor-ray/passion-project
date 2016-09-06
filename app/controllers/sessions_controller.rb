@@ -1,5 +1,9 @@
 get '/sessions' do
-  erb :'sessions/new'
+  if session[:id]
+    erb :'index'
+  else
+  redirect :'/sessions/new'
+  end
 end
 
 get '/sessions/new' do
@@ -10,16 +14,14 @@ post '/sessions' do
   @user = User.find_by_email(params[:email])
   if @user && @user.password == params[:password]
     session[:id] = @user.id
-    erb :'artist'
+    erb :'index'
   else
     @errors = ["Username && Password not found."]
     redirect :'users/new'
   end
 end
 
-
-# delete '/sessions/:id' do
 delete '/sessions' do
   session[:id] = nil
-  redirect '/'
+  redirect :'/'
 end

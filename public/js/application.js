@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
   // ajax related artist call///////
-  $(".front").on("submit", ".artist_search", function(event) {
+  $(".flipper").on("submit", ".artist_search", function(event) {
     event.preventDefault();
     var stuff = $(event).serialize();
     var name = this.name.value;
@@ -14,12 +14,6 @@ $(document).ready(function () {
     .done(function(response){
       $("#ra_placement_circle").replaceWith(response);
     })
-  });
-
-  $(".back").on("submit", ".artist_search", function(event) {
-    event.preventDefault();
-    var stuff = $(event).serialize();
-    var name = this.name.value;
 
     $.ajax({
       method: 'post',
@@ -30,7 +24,30 @@ $(document).ready(function () {
       $("#ra_placement").replaceWith(response);
     })
   });
+
+  $("")
+
+  // $(".back").on("submit", ".artist_search", function(event) {
+  //   event.preventDefault();
+  //   var stuff = $(event).serialize();
+  //   var name = this.name.value;
+
+  //   $.ajax({
+  //     method: 'post',
+  //     url: '/artist',
+  //     data: {name: name}
+  //   })
+  //   .done(function(response){
+  //     $("#ra_placement").replaceWith(response);
+  //   })
+  // });
   // ajax related artist call///////
+
+  $(".save_button").submit(function(event) {
+    event.preventDefault();
+
+    $
+  });
 
 // hover for snowflake///////
   $(".artist_div").mouseenter(function() {
@@ -58,31 +75,37 @@ $(document).ready(function () {
   });
   // hover for snowflake///////
 
+  // flip artist display container////////////
   $(".flip-button").on("click", function() {
-    console.log("hellooo")
     $("#flipper_box").toggleClass("flip-container");
   });
+  // flip artist display container////////////
 
+  // hide menu button////////////
   $(".open_btn").click( function(){
-    console.log("fackk")
     $(".open_btn").addClass("hide");
   });
 
   $(".closebtn").click( function(){
-    console.log("fackk")
     $(".open_btn").removeClass("hide");
   });
+  // hide menu button////////////
 
+  // hide/show search bar////////////
   $(".find_artist").click( function() {
     $("#search_input").toggleClass("hide");
   });
+  // hide/show search bar////////////
+
+
 });
 
+// Nav bar open/close ////////
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
 
-/* Set the width of the side navigation to 0 */
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+// Nav bar open/close ////////

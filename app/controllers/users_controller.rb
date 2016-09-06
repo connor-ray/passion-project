@@ -3,10 +3,14 @@ get '/users' do
   redirect "/"
 end
 
-# USERS NEW
 get '/users/new' do
-  @user = User.new
   erb :'users/new'
+end
+
+get '/users/:id' do
+  @user = User.find(params[:id])
+  @flakes = @user.flakes
+  erb :'users/show'
 end
 
 post '/users' do
@@ -15,7 +19,7 @@ post '/users' do
     @user = User.new(params[:user])
     if @user.save
       session[:id] = @user.id
-      erb :'artist'
+      redirect :'/'
     else
       @errors = @user.errors.full_messages
       erb :'error'

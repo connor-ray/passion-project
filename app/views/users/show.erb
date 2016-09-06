@@ -1,0 +1,29 @@
+<div class="pannel_container">
+  <div class="placement_div_l">
+    <div class="flakes_container">
+      <div class="inner_flake">
+        <h2 class="panel_title">Popular Flakes</h2>
+      </div>
+    </div>
+  </div>
+  <div class="placement_div_r">
+    <div class="popular_container">
+      <div class="inner_pop">
+        <h2 class="panel_title">My Flakes</h2>
+        <div class="my_flakes_container">
+          <p><%= @flakes %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="search_artist">
+  <a href="#"><h1 class='find_artist'>Find related artists</h1></a>
+
+  <form  id="artist_search_a" action="/artist" method="post">
+    <input id="search_input" class="first_search hide" type="text" name="name" autofocus="autofocus" placeholder="Artist">
+  </form>
+</div>
+
+

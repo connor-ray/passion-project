@@ -1,5 +1,5 @@
 get '/artist' do
-  erb :'artist'
+  redirect :'/'
 end
 
 post '/artist' do
@@ -10,12 +10,11 @@ post '/artist' do
     content_type :html
     erb :_related_artist, locals: {head_artist: head_artist, ra_data: ra_data}, layout: false
   else
-    artist = SpotifyArtist.new(params[:name])
     @ra_data = artist.related_artists
     @artist = artist.artist_data[0]
     @popularity = artist.artist_data[1]
     @genre = artist.artist_data[3][0]
-  erb :'show_artists'
+  erb :'flakes/show'
   end
 end
 
@@ -27,11 +26,10 @@ post '/artist_circle' do
     content_type :html
     erb :_related_artist_circle, locals: {head_artist: head_artist, ra_data: ra_data}, layout: false
   else
-    artist = SpotifyArtist.new(params[:name])
     @ra_data = artist.related_artists
     @artist = artist.artist_data[0]
     @popularity = artist.artist_data[1]
     @genre = artist.artist_data[3][0]
-  erb :'show_artists'
+  erb :'flakes/show'
   end
 end

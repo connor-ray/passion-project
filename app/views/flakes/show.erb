@@ -66,7 +66,11 @@
         <p></p>
       </div>
       <button class="flip-button">LIST</button>
-      <button id="save-button">SAVE</button>
+      <% if session[:id] %>
+        <form class="save_button" action="/flakes" method="post">
+          <input class="" type="submit" name="name" value="<%= @artist %>">
+        </form>
+      <% end %>
       <div id="ra_placement_circle">
         <div class="head_artist"><%= @artist %></div>
           <div class="b_artist_container">

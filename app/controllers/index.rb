@@ -1,16 +1,9 @@
 get '/' do
   if session[:id]
-    erb :'artist'
+    redirect :"/users/#{session[:id]}"
   else
-  redirect :'/sessions'
+    redirect :'/sessions'
   end
-end
-
-post '/' do
-    artist = SpotifyArtist.new(params[:name])
-    @ra_data = artist.related_artists
-    @artist = artist.artist_data[0]
-    erb :'show_artists'
 end
 
 
