@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+  /*background: #4F546E;*/
+  background-image: url("/gradient.png");
+  background-size: cover;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/*.content_container {
+  position: absolute;
+}*/
+
+.hide {
+  opacity: 0;
+  transition: .3s;
+}
+
+form {
+  margin: 25px auto;
+}
+
+input#submit {
+  background: none;
+  border: none;
+  padding: 0px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  float: left;
+  text-align: left;
+}
+
+input#submit:hover {
+  color: #0E624C;
+}
+
+.login_form {
+  margin-top: 140px;
+  width: 70%;
+  background: #1ab188;
+  box-shadow: 4px 5px 13px -1px rgba(0,0,0,0.56);
+  border-radius: 2%, 2%;
+}
+
+.search_artist {
+  padding-top: 50px;
+  font-size: 12px;
+}
+
+.header_bar {
+  background: white;
+  position: fixed;
+  height: 80px;
+  display: flex;
+  width: 100%;
+  top: 0;
+  z-index: 9998;
+  -webkit-box-shadow: -1px 2px 44px 0px rgba(59,57,59,1);
+  -moz-box-shadow: -1px 2px 44px 0px rgba(59,57,59,1);
+  box-shadow: -1px 2px 44px 0px rgba(59,57,59,1);
+}
+
+
+.artist_display_normal {
+  color: white;
+  background: #4F546E;
+  height: 17%;
+  width: 80%;
+  transition: .3s;
+}
+
+.artist_display_normal:hover {
+  color: #4F546E;
+  background: white;
+  width: 85%;
+  transition: .3s;
+}
+
+.art_btn {
+  width: 85%;
+}
+
+
+.sign_up {
+  font-size: 40px;
+  right: 3px;
+  padding-top: 40px;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  margin: 0 0 40px;
+}
+
+.title {
+  font-size: 50px;
+  right: 3px;
+  padding-top: 40px;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  margin: 0 0 40px;
+}
+
+
+input::-webkit-input-placeholder {
+color: #D2D2D2;
+}
+
+input:-moz-placeholder {
+color: #D2D2D2;
+}
+
+input::-moz-placeholder {
+color: #D2D2D2;
+}
+
+input:-ms-input-placeholder {
+color: #D2D2D2;
+}
+
+.login_title {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.title_container {
+  margin: 0 auto;
+  position: absolute;
+  font-size: 18px;
+  width: 10%;
+  left: 22%;
+  right: 20%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+}
+
+.title_container h1 {
+  display: inline;
+  font-family: "Oswald";
+  letter-spacing: .3em;
+  color: #4F546E;
+}
+
+input {
+  margin: auto;
+}
+
+
+.login_link {
+  font-size: 20px;
+  left: 3px;
+  padding-top: 5px;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  color: #1ab188;
+  font-weight: 400;
+  margin: 0 0 40px;
+}
+
+.delete_me {
+  padding: 200px;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #1ab188;
+}
+
+a:active {
+    text-decoration: none;
+    color: white;
+}
+
+input, textarea {
+  font-size: 22px;
+  display: block;
+  width: 95%;
+  padding: 5px;
+  background: white;
+  background-image: none;
+  border: 2px solid white;
+  color: black;
+  border-radius: 0.1;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+input:focus, textarea:focus {
+  outline: 0;
+}
+
+/*textarea {
+  resize: vertical;
+}*/
+
+
+.field-wrap {
+  left: 24%;
+  width: 50%;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: white;
+  color: #1ab188;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+.button:hover, .button:focus {
+  background: #0E624C;
+  color: white;
+}
+
+.button-block {
+  display: block;
+  color: #1ab188;
+  width: 100%;
+}

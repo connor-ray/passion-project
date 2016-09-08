@@ -1,0 +1,54 @@
+<div id="ra_placement_circle">
+  <div class="head_artist">
+    <% if session[:id] %>
+      <form class="save_form" action="/flakes" method="post">
+        <input type="hidden" name="name" value="<%= head_artist %>">
+        <input class="save_button" type="submit" value="Save">
+      </form>
+    <% end %>
+    <%= head_artist %>
+    <button class="flip-button">LIST</button>
+  </div>
+    <div class="b_artist_container">
+      <div class="artist_div" class="b_artist_1">
+        <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+          <input class="artist_display" type="submit" name="name" value="<%= ra_data[0]["name"] %>">
+        </form>
+      </div>
+      <div class="artist_div" class="b_artist_2">
+        <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+          <input class="artist_display" type="submit" name="name" value="<%= ra_data[1]["name"] %>">
+        </form>
+      </div>
+      <div class="artist_div" class="b_artist_3">
+        <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+          <input class="artist_display" type="submit" name="name" value="<%= ra_data[2]["name"] %>">
+        </form>
+      </div>
+      <div class="artist_div" class="b_artist_4">
+        <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+          <input class="artist_display" type="submit" name="name" value="<%= ra_data[3]["name"] %>">
+        </form>
+      </div>
+      <div class="artist_div" class="b_artist_6">
+        <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+          <input class="artist_display" type="submit" name="name" value="<%= ra_data[5]["name"] %>">
+        </form>
+      </div>
+      <div class="artist_div" class="b_artist_7">
+        <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+          <input class="artist_display" type="submit" name="name" value="<%= ra_data[6]["name"] %>">
+        </form>
+      </div>
+      <div class="artist_div" class="b_artist_8">
+        <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+          <input class="artist_display" type="submit" name="name" value="<%= ra_data[7]["name"] %>">
+        </form>
+      </div>
+      <div class="artist_div" class="b_artist_9">
+        <form class="artist_search" class="b_art_btn" action="/artist" method="post">
+          <input class="artist_display" type="submit" name="name" value="<%= ra_data[8]["name"] %>">
+        </form>
+      </div>
+    </div>
+  </div>

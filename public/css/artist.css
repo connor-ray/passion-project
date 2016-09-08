@@ -1,0 +1,106 @@
+ul {
+  list-style-type: none;
+  color: white;
+  padding-right: 40px;
+}
+
+
+.ra-container {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  border: solid white 1px;
+}
+
+#list form {
+  margin: 90px auto;
+}
+
+.second_search {
+  width: 17%;
+  margin-left: 20px;
+  position: absolute;
+  top: 24%;
+}
+
+.head_artist {
+  font-size: 70px;
+  color: white;
+  background: none;
+  padding-right: 70px
+}
+
+.artist {
+  width: 100%;
+}
+
+.artist_continer {
+  width: 100%;
+  display: inline-block;
+}
+
+.column_1 {
+  display: inline-block;
+  left: 2%;
+  width: 48%;
+}
+
+.column_2 {
+  display: inline-block;
+  right: 2%;
+  width: 48%;
+  border-left: solid white 2px;
+}
+
+.ra_name {
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+
+.find_artist {
+  right: 4px;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+
+.save_button {
+  width: 80px;
+  margin-left: 22px;
+  margin-top: 22px;
+  display: inline-block;
+  float: left;
+  letter-spacing: 2px;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: white;
+  background: none;
+}
+
+.saved {
+  width: 80px;
+  margin-left: 22px;
+  margin-top: 22px;
+  display: inline-block;
+  float: left;
+  letter-spacing: 2px;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: white;
+  background: #1ab188;
+}
+
+.save_button:hover {
+  color: #4F546E;
+  background: white;
+  transition: .3s;
+}

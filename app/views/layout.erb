@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <link rel="stylesheet" href="/css/application.css">
+  <link rel="stylesheet" href="/css/artist.css">
+  <link rel="stylesheet" href="/css/flip.css">
+  <link rel="stylesheet" href="/css/display.css">
+  <link rel="stylesheet" href="/css/side_nav.css">
+  <link rel="stylesheet" href="/css/home_page.css">
+
+  <script src="//d3js.org/d3.v3.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+
+  <title></title>
+</head>
+<body>
+  <% if session[:id] %>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div id="flake_show">
+        <form id="my_flakes_button" class="log_out_button" action="/flakes" method="get">
+          <input id="submit" class="lg_btn" type="submit" value="MY FALKES">
+        </form>
+      </div>
+      <div class="flake_list">
+      </div>
+      <div id="log_out_button">
+        <form class="log_out_button" action="/sessions" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input id="submit" class="lg_btn" type="submit" value="LOG OUT">
+        </form>
+      </div>
+  </div>
+  <% end %>
+  <div id="main_content">
+    <header class="header_bar">
+      <div class="title_container">
+        <a href="/artist"><h1 class="login_title">FLAKE</h1></a>
+      </div>
+      <% if session[:id] %>
+      <span class="open_btn"><a href="#" onclick="openNav()"><i class="material-icons">menu</i></a></span>
+      <% end %>
+    </header>
+    <div class="content_container">
+    <%= yield %>
+    </div>
+  </div>
+</body>
+</html>

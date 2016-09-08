@@ -1,0 +1,9 @@
+<ul>
+  <% flakes.each do |flake| %>
+    <li>
+      <form class="artist_search" action="/artist" method="post">
+        <input class="nav_list" type="submit" name="name" value="<%= flake.artist %>">
+      </form>
+    </li>
+  <% end %>
+</ul>
