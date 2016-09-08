@@ -1,36 +1,15 @@
 $(document).ready(function () {
 
-  // ajax related artist call///////
-  $(".flipper").on("submit", ".artist_search", function(event) {
-    event.preventDefault();
-    var name = this.name.value;
-
-    var request = $.ajax({
-      method: 'post',
-      url: '/artist_circle',
-      data: {name: name}
-    });
-
-    request.done(function(response){
-      $("#ra_placement_circle").replaceWith(response);
-    });
-
-    var request2 = $.ajax({
-      method: 'post',
-      url: '/artist',
-      data: {name: name}
-    });
-
-    request2.done(function(response){
-      $("#ra_placement").replaceWith(response);
-    });
-
-  });
-  // ajax related artist call///////
+  updateArtist();
+  hideMenu();
+  flipButton();
+  flakeNav();
+  hideSearch();
 
 // Save button //////////////// *IN PROGRESS
   $(".flipper").on("submit", ".save_form", function(event) {
     event.preventDefault();
+    console.log("triggering save");
     name = this.name.value;
     var request = $.ajax({
       method: 'post',
@@ -38,8 +17,7 @@ $(document).ready(function () {
       data: {name: name}
     });
     request.done(function(response){
-      $(".save_form").removeClass("save_button");
-      $(".save_form").addClass("saved")
+      $(".save_button").css("background", "#1ab188").val("SAVED").css("width", "100px");
     });
   });
 // Save button //////////////// *IN PROGRESS
@@ -71,13 +49,51 @@ $(document).ready(function () {
   });
   // hover for snowflake///////
 
-  // flip artist display container////////////
-  $(".flip-button").on("click", function() {
-    $("#flipper_box").toggleClass("flip-container");
+
+
+
+});
+
+  // hide/show search bar////////////
+  function hideSearch() {
+  $(".find_artist").click( function() {
+    $("#search_input").toggleClass("hide");
   });
-  // flip artist display container////////////
+  }
+  // hide/show search bar////////////
+
+  // ajax related artist call///////
+  function updateArtist() {
+  $(".flipper").on("submit", ".artist_search", function(event) {
+    event.preventDefault();
+    var name = this.name.value;
+    console.log("triggering");
+    var request = $.ajax({
+      method: 'post',
+      url: '/artist_circle',
+      data: {name: name}
+    });
+
+    request.done(function(response){
+      $("#ra_placement_circle").replaceWith(response);
+    });
+
+    var request2 = $.ajax({
+      method: 'post',
+      url: '/artist',
+      data: {name: name}
+    });
+
+    request2.done(function(response){
+      $("#ra_placement").replaceWith(response);
+    });
+
+  });
+  }
+  // ajax related artist call///////
 
   // hide menu button////////////
+  function hideMenu() {
   $(".open_btn").click( function(){
     $(".open_btn").addClass("hide");
   });
@@ -85,14 +101,19 @@ $(document).ready(function () {
   $(".closebtn").click( function(){
     $(".open_btn").removeClass("hide");
   });
+  }
   // hide menu button////////////
 
-  // hide/show search bar////////////
-  $(".find_artist").click( function() {
-    $("#search_input").toggleClass("hide");
+  // flip artist display container////////////
+  function flipButton() {
+    console.log("trigger");
+  $(".ra-container").on("click", ".flip-button", function() {
+    $("#flipper_box").toggleClass("flip-container");
   });
-  // hide/show search bar////////////
+  }
+  // flip artist display container////////////
 
+  function flakeNav() {
   $("#flake_show").click("#my_flakes_button", function(event){
     event.preventDefault();
     if ($(".flake_list").hasClass("show")) {
@@ -101,9 +122,9 @@ $(document).ready(function () {
     }
     else {
       var request = $.ajax({
-        method: 'post',
+        method: 'get',
         url: '/flakes',
-        data: {name: name}
+        data: {}
       });
 
       request.done(function(response){
@@ -113,10 +134,8 @@ $(document).ready(function () {
       $(".flake_list").addClass("show");
     }
   });
+  }
 
-
-
-});
 
 // Nav bar open/close ////////
 function openNav() {

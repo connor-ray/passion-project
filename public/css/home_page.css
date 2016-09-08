@@ -61,3 +61,17 @@
   font-size: 32px;
   letter-spacing: 4px;
 }
+
+.home_list {
+  background: none;
+  color: white;
+  border: white 1px solid;
+  transition: .3s;
+}
+
+.home_list:hover {
+  color: #4F546E;
+  background: white;
+  width: 100%;
+  transition: .3s;
+}

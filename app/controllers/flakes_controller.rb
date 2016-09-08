@@ -1,5 +1,11 @@
 get '/flakes' do
-  @flakes = Flake.all
+  id = session[:id]
+  user = User.find_by(id: id)
+  flakes = user.flakes
+  if request.xhr?
+    content_type :html
+    erb :_flake, locals: {flakes: flakes}, layout: false
+  end
 end
 
 post '/flakes' do
@@ -11,8 +17,6 @@ post '/flakes' do
   flakes = user.flakes
   if flake.save
     if request.xhr?
-      content_type :html
-      erb :_flake, locals: {flakes: flakes}, layout: false
     end
   else
     redirect :'/'

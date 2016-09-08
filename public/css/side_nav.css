@@ -25,6 +25,18 @@
     transition: 0.3s
 }
 
+.nav_list {
+  background: none;
+  color: white;
+  padding-bottom: 30px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: white 1px solid;
+}
+.nav_list:hover {
+  color: #0E624C;
+}
 .flake_list {
   height: 0px;
   transition: .5s;

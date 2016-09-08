@@ -1,12 +1,15 @@
 <div id="ra_placement_circle">
-  <% if session[:id] %>
-    <form class="save_button" action="/flakes" method="post">
-      <input type="hidden" name="name" value="<%= head_artist %>">
-      <input type="submit" value="Save">
-    </form>
-  <% end %>
-  <div class="head_artist"><%= head_artist %></div>
-  <div class="b_artist_container">
+  <div class="head_artist">
+    <% if session[:id] %>
+      <form class="save_form" action="/flakes" method="post">
+        <input type="hidden" name="name" value="<%= head_artist %>">
+        <input class="save_button" type="submit" value="Save">
+      </form>
+    <% end %>
+    <%= head_artist %>
+    <button class="flip-button">LIST</button>
+  </div>
+    <div class="b_artist_container">
       <div class="artist_div" class="b_artist_1">
         <form class="artist_search" class="b_art_btn" action="/artist" method="post">
           <input class="artist_display" type="submit" name="name" value="<%= ra_data[0]["name"] %>">
@@ -47,5 +50,5 @@
           <input class="artist_display" type="submit" name="name" value="<%= ra_data[8]["name"] %>">
         </form>
       </div>
+    </div>
   </div>
-</div>
