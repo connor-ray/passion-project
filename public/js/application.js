@@ -97,8 +97,7 @@ $(document).ready(function () {
     event.preventDefault();
     if ($(".flake_list").hasClass("show")) {
         $(".flake_list").removeClass("show");
-        var emptyDiv = $(".flake_list").empty()
-        setTimeout(function(){emptyDiv}, 5000);
+        var emptyDiv = $(".flake_list");
     }
     else {
       var request = $.ajax({
