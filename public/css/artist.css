@@ -7,12 +7,10 @@ ul {
 
 .ra-container {
   width: 80%;
-  margin: 10px auto;
-  margin-top: 60px;
-  position: absolute;
+  margin: 0 auto;
+  position: relative;
   text-align: center;
   border: solid white 1px;
-  text-align: center;
 }
 
 #list form {
