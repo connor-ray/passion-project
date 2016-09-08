@@ -29,7 +29,8 @@ ul {
 .head_artist {
   font-size: 70px;
   color: white;
-  background: #4F546E;
+  background: none;
+  padding-right: 70px
 }
 
 .artist {
@@ -72,4 +73,36 @@ h2 {
   color: white;
   font-weight: 400;
   margin: 0 0 10px;
+}
+
+.save_button {
+  width: 80px;
+  margin-left: 22px;
+  margin-top: 22px;
+  display: inline-block;
+  float: left;
+  letter-spacing: 2px;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: white;
+  background: #1ab188;
+}
+
+.saved {
+  width: 80px;
+  margin-left: 22px;
+  margin-top: 22px;
+  display: inline-block;
+  float: left;
+  letter-spacing: 2px;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: white;
+  background: #1ab188;
+}
+
+.save_button:hover {
+  color: #4F546E;
+  background: white;
+  transition: .3s;
 }

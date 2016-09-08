@@ -79,10 +79,10 @@
 .flip-button {
   right: 0;
   border: 2px solid white;
-  background: #4F546E;
+  background: none;
   color: white;
   position: absolute;
-  margin-top: 12px;
+  margin-top: 32px;
   margin-right: 22px;
   font-size: 30px;
   top: 2%;
@@ -90,27 +90,7 @@
   letter-spacing: 2px;
 }
 
-#flip-button:hover {
-  color: #4F546E;
-  background: white;
-  transition: .3s;
-}
-
-#save-button {
-  left: 0;
-  border: 2px solid white;
-  background: #4F546E;
-  color: white;
-  position: absolute;
-  margin-top: 12px;
-  margin-left: 22px;
-  font-size: 30px;
-  top: 2%;
-  transition: .3s;
-  letter-spacing: 2px;
-}
-
-#save-button:hover {
+.flip-button:hover {
   color: #4F546E;
   background: white;
   transition: .3s;

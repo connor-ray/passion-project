@@ -29,17 +29,17 @@ $(document).ready(function () {
   // ajax related artist call///////
 
 // Save button //////////////// *IN PROGRESS
-  $(".flipper").on("submit", ".save_button", function(event) {
+  $(".flipper").on("submit", ".save_form", function(event) {
     event.preventDefault();
     name = this.name.value;
-    console.log(name);
-    // var request = $.ajax({
-    //   method: 'post',
-    //   url: '/flakes',
-    //   data: {name: name}
-    // });
+    var request = $.ajax({
+      method: 'post',
+      url: '/flakes',
+      data: {name: name}
+    });
     request.done(function(response){
-
+      $(".save_form").removeClass("save_button");
+      $(".save_form").addClass("saved")
     });
   });
 // Save button //////////////// *IN PROGRESS

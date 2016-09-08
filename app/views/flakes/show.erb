@@ -6,15 +6,17 @@
    <div class="flipper" class="active">
     <div class="back">
       <div id="list" class="ra-container">
-        <button class="flip-button">FLAKE</button>
         <div id="ra_placement">
-        <% if session[:id] %>
-          <form class="save_button" action="/flakes" method="post">
-            <input type="hidden" name="name" value="<%= @artist %>">
-            <input type="submit" value="Save">
-          </form>
-        <% end %>
-         <div class="head_artist"><%= @artist %></div>
+        <div class="head_artist">
+          <% if session[:id] %>
+            <form class="save_form" action="/flakes" method="post">
+              <input type="hidden" name="name" value="<%= @artist %>">
+              <input class="save_button" type="submit" value="Save">
+            </form>
+          <% end %>
+          <button class="flip-button">LIST</button>
+          <%= @artist %>
+        </div>
           <div class="artist_container">
           <div class="column_1">
             <div class="artist">
@@ -71,15 +73,17 @@
       <div class="test-div">
         <p></p>
       </div>
-      <button class="flip-button">LIST</button>
       <div id="ra_placement_circle">
-      <% if session[:id] %>
-        <form class="save_button" action="/flakes" method="post">
-          <input type="hidden" name="name" value="<%= @artist %>">
-          <input type="submit" value="Save">
-        </form>
-      <% end %>
-        <div class="head_artist"><%= @artist %></div>
+        <div class="head_artist">
+          <% if session[:id] %>
+            <form class="save_form" action="/flakes" method="post">
+              <input type="hidden" name="name" value="<%= @artist %>">
+              <input class="save_button" type="submit" value="Save">
+            </form>
+          <% end %>
+          <%= @artist %>
+          <button class="flip-button">LIST</button>
+        </div>
           <div class="b_artist_container">
             <div class="artist_div" class="b_artist_1">
               <form class="artist_search" class="b_art_btn" action="/artist" method="post">
